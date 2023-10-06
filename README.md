@@ -184,5 +184,11 @@ docs/*/tmp
 file?.txt 
 - #ignore all files which name starts with file and ends with .txt in the middle symbole from [] <br>
 file[0-2].txt
-- #ignore catalogues <br>
+- #ignore toso.txt in root foulder <br>
 /todo.txt
+- #ignore all files in foulder build <br>
+build/ 
+- #ignore such files as "docs/current/tmp", "docs/old/tmp","docs/old/saved/a/b/c/d/tmp" <br>
+docs/**/tmp
+- #don't ignore doge.jpeg file
+!doge.jpeg 
