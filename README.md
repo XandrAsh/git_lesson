@@ -63,23 +63,23 @@ git push -u origin master
 ----------
 
 ## Other usefull git commands
-- create isolated development environments within a single repository  <br>
+- #create isolated development environments within a single repository  <br>
 git branch 
-- check out old commits and old file revisions, navigate existing branches  <br>
+- #check out old commits and old file revisions, navigate existing branches  <br>
 git checkout
-- Remove untracked files from the working directory  <br>
+- #Remove untracked files from the working directory  <br>
 git clean 
-- Create a copy of an existing Git repository  <br>
+- #Create a copy of an existing Git repository  <br>
 git clone 
-- Fetch downloads a branch from another repo, along with all of its associated commits and files  <br>
+- #Fetch downloads a branch from another repo, along with all of its associated commits and files  <br>
 git fetch 
-- explore the previous revisions of a project  <br>
+- #explore the previous revisions of a project  <br>
 git log
-- integrate changes from divergent branches  <br>
+- #integrate changes from divergent branches  <br>
 git merge 
-- download a branch from a remote repository and merge it into the current branch  <br>
+- #download a branch from a remote repository and merge it into the current branch  <br>
 git pull 
-- clean up or completely remove changes that have not been pushed to a public repository  <br>
+- #clean up or completely remove changes that have not been pushed to a public repository  <br>
 git reset 
 
 
@@ -87,36 +87,36 @@ git reset
 
 ## hash
 
-- 40 symbols sha-1  <br>
-- stores info about author + date  <br>
-- commit: hash, author, date, comment  <br>
-- see short git log <br>
+- #40 symbols sha-1  <br>
+- #stores info about author + date  <br>
+- #commit: hash, author, date, comment  <br>
+- #see short git log <br>
 git log --oneline
-- HEAD file = last commit <br>
+- #HEAD file = last commit <br>
 cat HEAD
-- see last commit hash  <br>
+- #see last commit hash  <br>
 cat refs/heads/master
 
 ----------
 
 ## statuses 
 
-- untracked: Untracked new files (to move to tracked use git add...)  <br>
-- tracked: (after git add or git commit)  <br>
-- staged: Changes to be committed, indexed or cashed,  modified+git add <br>
-- modified: Changes not staged for commit <br>
-- to unstage   <br>
-git restore --staged
-- to discard changes in working directory <br>
+- #untracked: Untracked new files (to move to tracked use git add...)  <br>
+- #tracked: (after git add or git commit)  <br>
+- #staged: Changes to be committed, indexed or cashed,  modified+git add <br>
+- #modified: Changes not staged for commit <br>
+- #to unstage   <br>
+git restore --staged .
+- #to discard changes in working directory <br>
 git restore ...
 
 --------
 
 ## Messages
 
-- from 30 to 70 symbols <br>
-- informative <br>
-- Jira-ID, Feat/fix,  #of bag, short description <br>
+- #from 30 to 70 symbols <br>
+- #informative <br>
+- #Jira-ID, Feat/fix,  #of bag, short description <br>
 
 ## mermaid
 ```mermaid
@@ -127,3 +127,68 @@ graph LR;
   tracked -- "modify" --> modified
   modified -- "git add" --> staged+tracked
 ```
+
+------------
+
+## commit
+
+- #change your last (HEAD) commit without changing comment <br>
+git commit --amend --no-edit
+- #change your last (HEAD) commit and comment <br>
+git commit --amend -m "New message"
+- #update your comment in NANO or VIM <br>
+- #lauch VIM tutoruail <br>
+vimtutor
+- #reset last commit <br>
+git reset --hard <commit hash>
+
+---------
+
+## track file changes
+
+- #get files differences <br>
+git diff
+- #red line (and minus) = line was deleted <br>
+- #green line (and plus) = line was inserted <br>
+- #a/stihi.txt = original version of file <br>
+- #b/stihi.txt = new version of file <br>
+- #@@ -1,10 +1,10 @@ - 10 lines are shown started from first line <br>
+
+--------- 
+
+## change file
+
+- #add line to the end of the file <br>
+cat file.txt <br>
+echo "Hello!" >> file.txt <br>
+cat file.txt <br>
+- #erase info in file <br>
+echo "Новая строка" > file.txt
+- #compare two commit  <br>
+git diff 1c29af6 48fe3dc or git diff 1c29af6 HEAD
+- #show all hash commits  <br>
+git log --oneline
+- #show all staged (indexed) commits  <br>
+git diff --staged
+
+-----------
+
+## gitignore
+
+- "#" = line with comment  <br>
+- #ignore all files which end with .jpeg  <br>
+*.jpeg
+- #ignore all files which end with .jpeg in foulders docs  <br>
+docs/*/tmp 
+- #ignore all files which name starts with file and ends with .txt  <br>
+file?.txt 
+- #ignore all files which name starts with file and ends with .txt in the middle symbole from [] <br>
+file[0-2].txt
+- #ignore toso.txt in root foulder <br>
+/todo.txt
+- #ignore all files in foulder build <br>
+build/ 
+- #ignore such files as "docs/current/tmp", "docs/old/tmp","docs/old/saved/a/b/c/d/tmp" <br>
+docs/**/tmp
+- #don't ignore doge.jpeg file
+!doge.jpeg 
