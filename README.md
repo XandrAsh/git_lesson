@@ -106,7 +106,7 @@ cat refs/heads/master
 - staged: Changes to be committed, indexed or cashed,  modified+git add <br>
 - modified: Changes not staged for commit <br>
 - to unstage   <br>
-git restore --staged
+git restore --staged .
 - to discard changes in working directory <br>
 git restore ...
 
@@ -127,3 +127,18 @@ graph LR;
   tracked -- "modify" --> modified
   modified -- "git add" --> staged+tracked
 ```
+
+------------
+
+## commit
+
+- change your last (HEAD) commit without changing comment <br>
+git commit --amend --no-edit
+- change your last (HEAD) commit and comment <br>
+git commit --amend -m "New message"
+- update your comment in NANO or VIM <br>
+- lauch VIM tutoruail  <br>
+vimtutor
+- reset last commit  <br>
+git reset --hard <commit hash>
+
