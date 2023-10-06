@@ -125,5 +125,5 @@ graph LR;
   untracked -- "git add" --> staged+tracked;
   staged+tracked    -- "modified+git add"     --> tracked
   tracked -- "modify" --> modified
-  modified -- "git add" --> staged
+  modified -- "git add" --> staged+tracked
 ```
