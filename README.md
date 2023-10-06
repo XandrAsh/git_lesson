@@ -63,17 +63,22 @@ git push -u origin master
 ----------
 
 ## Other usefull git commands
-
-
-
-
-
-
-
-
-
-
-
-
-
+- create isolated development environments within a single repository  <br>
+git branch 
+- check out old commits and old file revisions, navigate existing branches  <br>
+git checkout
+- Remove untracked files from the working directory  <br>
+git clean 
+- Create a copy of an existing Git repository  <br>
+git clone 
+- Fetch downloads a branch from another repo, along with all of its associated commits and files  <br>
+git fetch 
+- explore the previous revisions of a project  <br>
+git log
+- integrate changes from divergent branches  <br>
+git merge 
+- download a branch from a remote repository and merge it into the current branch  <br>
+git pull 
+- clean up or completely remove changes that have not been pushed to a public repository  <br>
+git reset 
 
