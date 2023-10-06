@@ -82,3 +82,48 @@ git pull
 - clean up or completely remove changes that have not been pushed to a public repository  <br>
 git reset 
 
+
+---------
+
+## hash
+
+- 40 symbols sha-1  <br>
+- stores info about author + date  <br>
+- commit: hash, author, date, comment  <br>
+- see short git log <br>
+git log --oneline
+- HEAD file = last commit <br>
+cat HEAD
+- see last commit hash  <br>
+cat refs/heads/master
+
+----------
+
+## statuses 
+
+- untracked: Untracked new files (to move to tracked use git add...)  <br>
+- tracked: (after git add or git commit)  <br>
+- staged: Changes to be committed, indexed or cashed,  modified+git add <br>
+- modified: Changes not staged for commit <br>
+- to unstage   <br>
+git restore --staged
+- to discard changes in working directory <br>
+git restore ...
+
+--------
+
+## Messages
+
+- from 30 to 70 symbols <br>
+- informative <br>
+- Jira-ID, Feat/fix,  #of bag, short description <br>
+
+## mermaid
+```mermaid
+%% description of scheme
+graph LR;
+  untracked -- "git add" --> staged+tracked;
+  staged+tracked    -- "modified+git add"     --> tracked
+  tracked -- "modify" --> modified
+  modified -- "git add" --> staged
+```
