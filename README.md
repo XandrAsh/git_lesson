@@ -3,14 +3,22 @@
 ## start with local GIT
 
 
-- #Install GIT to your pc <br>
+- **Install GIT to your pc <br>**
+```shell
 sudo apt install git
-- #Initalise GIT<br>
+```
+- **Initalise GIT<br>**
+```shell
 git init
-- #check GIT configuration<br>
+```
+- **check GIT configuration<br>**
+```shell
 git config
-- #check GIT status <br>
+```
+- **check GIT status <br>**
+```shell
 git status
+```
 - #delete GIT from folder <br>
 ```shell
 rm -rf .git
