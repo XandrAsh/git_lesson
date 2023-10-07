@@ -3,7 +3,9 @@
 ## start with local GIT
 
 ### - Install GIT to your pc <br>
+```shell
 sudo apt install git
+```
 #### - Initalise GIT<br>
 git init
 - #check GIT configuration<br>
