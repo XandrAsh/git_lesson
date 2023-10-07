@@ -27,7 +27,7 @@ rm -rf .git
 ---
 ## generate SSH keys public and private
 
-
+12
 
 - go to your home directory <br>
 cd ~
