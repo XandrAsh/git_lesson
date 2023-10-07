@@ -1,5 +1,5 @@
 # git_lesson
-[[toc]]
+
 ## start with local GIT
 
 ### - Install GIT to your pc <br>
@@ -14,7 +14,7 @@ git status
 rm -rf .git
 
 ---------------
-
+ 
 ## generate SSH keys public and private
 
 - #go to your home directory <br>
