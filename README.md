@@ -3,8 +3,6 @@
 ## start with local GIT
 
 
-
-asdasdasd
 - #Install GIT to your pc <br>
 sudo apt install git
 - #Initalise GIT<br>
@@ -18,14 +16,13 @@ git status
 rm -rf .git
 ```
 
-
 ---
 
 ## generate SSH keys public and private
 
 
 
-- _**go to your home directory <br>**_
+- go to your home directory <br>
 cd ~
 - #check if you already have a generated ssh key <br>
 ls -la .ssh/
