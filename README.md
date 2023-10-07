@@ -25,7 +25,6 @@ rm -rf .git
 ```
 
 ---
-
 ## generate SSH keys public and private
 
 
