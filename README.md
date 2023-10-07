@@ -1,5 +1,5 @@
 # git_lesson
-
+[[toc]]
 ## start with local GIT
 
 ### - Install GIT to your pc <br>
