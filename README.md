@@ -2,24 +2,34 @@
 
 ## start with local GIT
 
-### - Install GIT to your pc <br>
+
+- **Install GIT to your pc <br>**
 ```shell
 sudo apt install git
 ```
-#### - Initalise GIT<br>
+- **Initalise GIT<br>**
+```shell
 git init
-- #check GIT configuration<br>
+```
+- **check GIT configuration<br>**
+```shell
 git config
-- #check GIT status <br>
+```
+- **check GIT status <br>**
+```shell
 git status
-- #delete GIT from foulder <br>
+```
+- #delete GIT from folder <br>
+```shell
 rm -rf .git
+```
 
----------------
- 
+---
 ## generate SSH keys public and private
 
-- #go to your home directory <br>
+
+
+- go to your home directory <br>
 cd ~
 - #check if you already have a generated ssh key <br>
 ls -la .ssh/
